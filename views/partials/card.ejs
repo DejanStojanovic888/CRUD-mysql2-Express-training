@@ -1,0 +1,24 @@
+<div class="col-4">
+    <div class="card mb-3 
+    <% if (user.active) { %>
+        bg-primary
+    <% } else { %>
+        bg-secondary
+    <% } %>
+    ">
+        <div class="card-header">
+            <%= user.full_name %>
+        </div>
+        <div class="card-body">
+            <%= user.email %>
+        </div>
+        <div class="card-footer">
+            <a href="/delete/<%= user.id %>" class="btn btn-danger">Delete</a>
+            <% if (user.active) { %>
+                <a href="/update/<%= user.id %>/<%= !user.active %>" class="btn btn-warning">Active</a>
+            <% } else { %>
+                <a href="/update/<%= user.id %>/<%= !user.active %>" class="btn btn-warning">Inactive</a>
+            <% } %>
+        </div>
+    </div>
+</div>
