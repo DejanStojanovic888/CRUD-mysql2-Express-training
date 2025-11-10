@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<<<<<<< HEAD
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -41,3 +42,39 @@
     <script src="/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
+=======
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-8 offset-2">
+                <div class="row mb-5">
+                    <form action="/create" method="post">
+                        <div class="input-group">
+                            <input type="text" placeholder="full_name" name="full_name" class="form-control">
+                            <input type="text" placeholder="email" name="email" class="form-control">
+                            <button type="submit" class="btn btn-primary">Save</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="row">
+                    <% for( let i=0; i < data.length; i++ ) { %>
+                        <%- include('./partials/card', {user: data[i]}) %>
+                            <% } %>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+>>>>>>> 1e885f683033724d32a4eea48f6135e229f9f1ef
